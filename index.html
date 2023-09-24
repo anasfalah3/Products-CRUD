@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+      <div class="crud">
+            <div class="head">
+                  <h2>my cruds</h2>
+                  <p>this is my tch program</p>
+            </div>
+
+            <div class="inputs">
+                  <input type="text" id="title" placeholder="title">
+                  <div class="price">
+                        <input onkeyup="getTotal()" type="number" name="price" id="price" placeholder="price">
+                        <input onkeyup="getTotal()" type="number" name="taxes" id="taxes" placeholder="taxes">
+                        <input onkeyup="getTotal()" type="number" name="ads" id="ads" placeholder="ads">
+                        <input onkeyup="getTotal()" type="number" name="discount" id="discount" placeholder="discount">
+                        <small id="totale"></small>
+                  </div>
+                  <input type="number" name="count" id="count" placeholder="count">
+                  <input type="text" name="category" id="category" placeholder="category">
+                  <button id="Submit">Create</button>
+            </div>
+
+            <div class="outputs">
+                  <div class="searchBlock">
+                        <input onkeyup="searchProduct(this.value)" type="text" id="search" placeholder="Search">
+                  </div>
+                  <div class="btnSearch">
+                        <button onclick="getSearchMood(this.id)" id="searchByTitle">Search By Title</button>
+                        <button onclick="getSearchMood(this.id)" id="searchByCategory">Search By Category</button>
+                  </div>
+                  <div id="deletAll">
+                  <button id="btnDeleteAll" onclick="deletAllProduct()">Delete All <span id="deletNum"></span></button>
+                  </div>
+                  <table>
+                        <tr>
+                              <th>ID</th>
+                              <th>Title</th>
+                              <th>Price</th>
+                              <th>Taxes</th>
+                              <th>Ads</th>
+                              <th>Discount</th>
+                              <th>Total</th>
+                              <th>Category</th>
+                              <th>Update</th>
+                              <th>Delete</th>
+                        </tr>
+                        <tbody id="tbody">
+                        </tbody>
+                  </table>
+
+            </div>
+      </div>
+
+      <script src="script.js"></script>
+</body>
+</html>
